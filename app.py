@@ -7,7 +7,13 @@ st.title("💰 Crowd-Funding App")
 
 init_session_state()
 
+main_menu = ["Home", "Register", "Activate Account", "Login", "View Projects", "Search Projects"]
+
 # Sidebar navigation
 st.sidebar.title("Navigation")
 page = st.sidebar.selectbox("Choose Page", 
-                            ["Home", "Register", "Activate Account", "Login", "View Projects", "Search Projects"])
+                            main_menu,)
+
+if page == "Home":
+    st.write("Welcome to the Crowd-Funding App!")
+    st.write("Please register or login to get started.")
