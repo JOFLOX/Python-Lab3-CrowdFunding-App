@@ -4,7 +4,7 @@ import os
 
 
 
-load_dotenv()
+# load_dotenv()
 
 
 def send_email(email: str, code: str) -> bool:
