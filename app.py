@@ -7,6 +7,7 @@ from dashboard import dashboard
 from create_project import create_project
 from all_projects import all_projects
 from my_projects import my_projects
+from search_projects import search_projects
 
 
 st.set_page_config(page_title="Crowd-Funding App", page_icon="💰", layout="wide")
@@ -57,5 +58,7 @@ else:
         all_projects()
     elif page == "My Projects":
         my_projects()
+    elif page == "Search Projects":
+        search_projects()
     
             
