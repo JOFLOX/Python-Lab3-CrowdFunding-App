@@ -46,3 +46,9 @@ def current_user_info(email: str) -> dict:
         if user["email"] == email:
             return user
     return None
+
+def project_exists(title: str) -> bool:
+    for project in st.session_state.projects:
+        if project["title"] == title:
+            return True
+    return False
