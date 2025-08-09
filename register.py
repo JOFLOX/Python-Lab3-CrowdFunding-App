@@ -1,5 +1,5 @@
 import streamlit as st
-from validation import validate_email, validate_phone, validate_password , validate_name
+from validation import *
 
 def register():
     st.header("Register")
@@ -21,6 +21,9 @@ def register():
                 return
             if not validate_email(email):
                 st.error("Invalid email")
+                return
+            if validate_email_exists(email):
+                st.error("Email already exists")
                 return
             if not validate_phone(mobile):
                 st.error("Invalid phone number (should be Egyptian)")
