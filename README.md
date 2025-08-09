@@ -30,3 +30,13 @@ and password
 • User can search for a project using date (bonus) 
 Similar Projects to get some inspiration :)  
 https://www.gofundme.com https://www.kickstarter.com   https://www.crowdfunding.com
+
+
+
+
+STARTING WITH STREAMLIT:
+Dear Developers, 
+If you want to start learning more about streamlit, please here some resources:
+Documentation: https://docs.streamlit.io/
+How your session works: https://docs.streamlit.io/develop/api-reference/caching-and-state/st.session_state 
+
