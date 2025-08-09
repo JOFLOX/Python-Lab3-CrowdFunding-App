@@ -8,6 +8,7 @@ from create_project import create_project
 from all_projects import all_projects
 from my_projects import my_projects
 from search_projects import search_projects
+from home import home
 
 
 st.set_page_config(page_title="Crowd-Funding App", page_icon="💰", layout="wide")
@@ -27,8 +28,7 @@ if st.session_state.current_user is None:
                                 main_menu,)
 
     if page == "Home":
-        st.write("Welcome to the Crowd-Funding App!")
-        st.write("Please register or login to get started.")
+         home()
     elif page == "Register":
         register()
     elif page == "Activate Account":
@@ -48,7 +48,7 @@ else:
         st.rerun()
     
     page = st.sidebar.selectbox("Choose Action", 
-                                ["Dashboard", "Create Project", "View All Projects", "My Projects", "Search Projects"])
+                                user_menu,)
     
     if page == "Dashboard":
         dashboard()
