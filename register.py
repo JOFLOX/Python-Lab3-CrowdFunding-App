@@ -28,6 +28,15 @@ def register():
             if not validate_password(password):
                 st.error("Password must be at least 8 characters")
                 return
+            
+            st.session_state.users.append({
+                "first_name": first_name,
+                "last_name": last_name,
+                "email": email,
+                "password": password,
+                "mobile": mobile,
+                "active": False
+            })
             st.success("Registered successfully")
 
 
@@ -37,3 +46,5 @@ def register():
     # st.write("password: " + password)
     # st.write("confirm password: " + confirm_password)
     # st.write("mobile: " + mobile)
+
+    # st.write(st.session_state.users)
