@@ -1,5 +1,7 @@
 import re
 import streamlit as st
+import random
+
 
 def validate_name(name: str) -> bool:
     return bool(re.match(r"^[a-zA-Z\s]+$", name))
@@ -21,6 +23,11 @@ def validate_email_activated(email: str) -> bool:
                 return True
             return False
     return False
+
+
+def generate_code():
+    return str(random.randint(100000, 999999))
+
 
 def validate_phone(phone: str) -> bool:
     return bool(re.match(r"^(01[0125]\d{8})$", phone))

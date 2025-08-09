@@ -1,6 +1,9 @@
 import smtplib
 from dotenv import load_dotenv
 import os
+from validation import generate_code
+
+
 
 load_dotenv()
 
@@ -11,9 +14,15 @@ def send_email(email: str, code: str) -> bool:
         server.starttls()
 
         server.login(os.getenv("EMAIL"), os.getenv("PASSWD"))
-
-        text = f"Subject: Activation Code\n\nYour activation code is {code}"
-
+        
+        text = (
+                "Subject: Your Activation Code\n\n"
+                f"Hello,\n\n"
+                f"Your activation code is: {code}\n\n"
+                "Please enter this code in the application to verify your account.\n\n"
+                "Thank you,\n"
+                "The Support Team"
+            )
         server.sendmail(os.getenv("EMAIL"), email, text)
         server.quit()
         return True
@@ -21,3 +30,5 @@ def send_email(email: str, code: str) -> bool:
         return False
     
 
+code = generate_code()
+send_email("youssef.basha7@gmail.com", code)
