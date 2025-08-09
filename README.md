@@ -39,4 +39,4 @@ Dear Developers,
 If you want to start learning more about streamlit, please here some resources:
 Documentation: https://docs.streamlit.io/
 How your session works: https://docs.streamlit.io/develop/api-reference/caching-and-state/st.session_state 
-
+using forms: https://docs.streamlit.io/develop/concepts/architecture/forms

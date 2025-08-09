@@ -1,5 +1,7 @@
 import streamlit as st
 from init_state import init_session_state
+from register import register
+
 
 st.set_page_config(page_title="Crowd-Funding App", page_icon="💰", layout="wide")
 
@@ -17,3 +19,5 @@ page = st.sidebar.selectbox("Choose Page",
 if page == "Home":
     st.write("Welcome to the Crowd-Funding App!")
     st.write("Please register or login to get started.")
+elif page == "Register":
+    register()
