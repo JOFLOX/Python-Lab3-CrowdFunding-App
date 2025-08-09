@@ -31,9 +31,9 @@ def register():
             st.success("Registered successfully")
 
 
-    st.write("first name: " + first_name)
-    st.write("last name: " + last_name)
-    st.write("email: " + email)
-    st.write("password: " + password)
-    st.write("confirm password: " + confirm_password)
-    st.write("mobile: " + mobile)
+    # st.write("first name: " + first_name)
+    # st.write("last name: " + last_name)
+    # st.write("email: " + email)
+    # st.write("password: " + password)
+    # st.write("confirm password: " + confirm_password)
+    # st.write("mobile: " + mobile)
