@@ -1,7 +1,6 @@
 import smtplib
 from dotenv import load_dotenv
 import os
-from validation import generate_code
 
 
 
@@ -29,6 +28,3 @@ def send_email(email: str, code: str) -> bool:
     except:
         return False
     
-
-code = generate_code()
-send_email("youssef.basha7@gmail.com", code)
