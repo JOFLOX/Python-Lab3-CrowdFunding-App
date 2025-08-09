@@ -18,7 +18,7 @@ st.title("💰 Crowd-Funding App")
 init_session_state()
 
 main_menu = ["Home", "Register", "Activate Account", "Login"]
-user_menu = ["dashboard", "Create Project", "View Projects", "Logout"]
+user_menu = ["Dashboard", "Create Project", "View All Projects", "My Projects", "Search Projects"]
 
 if st.session_state.current_user is None:
 

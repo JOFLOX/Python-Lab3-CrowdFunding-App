@@ -31,4 +31,4 @@ def create_project():
                     "end": end_date 
                 })
                 st.success("Project created successfully!")
-                st.write(st.session_state.projects)
+                # st.write(st.session_state.projects)
