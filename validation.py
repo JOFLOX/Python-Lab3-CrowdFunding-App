@@ -19,7 +19,6 @@ def validate_email_activated(email: str) -> bool:
     for user in st.session_state.users:
         if user["email"] == email:
             if user["active"] == True:
-                st.warning("Account already activated")
                 return True
             return False
     return False
@@ -34,3 +33,16 @@ def validate_phone(phone: str) -> bool:
 
 def validate_password(password: str) -> bool:
     return len(password) >= 8
+
+def validate_password_match(password: str, email: str) -> bool:
+    for user in st.session_state.users:
+        if user["email"] == email:
+            confirm_password = user["password"]
+            break
+    return password == confirm_password
+
+def current_user_info(email: str) -> dict:
+    for user in st.session_state.users:
+        if user["email"] == email:
+            return user
+    return None

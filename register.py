@@ -40,7 +40,7 @@ def register():
                 "mobile": mobile,
                 "active": False
             })
-            st.success("Registered successfully")
+            st.success("Registered successfully, please activate your account!")
 
 
     # st.write("first name: " + first_name)

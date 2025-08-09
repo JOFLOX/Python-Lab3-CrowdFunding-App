@@ -18,6 +18,7 @@ def activate_account():
                 st.error("Email does not exist")
                 return
             if validate_email_activated(email):
+                st.warning("Account already activated")
                 return
             
             st.session_state.email_to_activate = email
