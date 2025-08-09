@@ -6,6 +6,7 @@ from login import login
 from dashboard import dashboard
 from create_project import create_project
 from all_projects import all_projects
+from my_projects import my_projects
 
 
 st.set_page_config(page_title="Crowd-Funding App", page_icon="💰", layout="wide")
@@ -54,4 +55,7 @@ else:
         create_project()
     elif page == "View All Projects":
         all_projects()
+    elif page == "My Projects":
+        my_projects()
+    
             

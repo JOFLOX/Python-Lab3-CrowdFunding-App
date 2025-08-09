@@ -40,3 +40,7 @@ If you want to start learning more about streamlit, please here some resources:
 Documentation: https://docs.streamlit.io/
 How your session works: https://docs.streamlit.io/develop/api-reference/caching-and-state/st.session_state 
 using forms: https://docs.streamlit.io/develop/concepts/architecture/forms
+using rerun: https://docs.streamlit.io/develop/api-reference/execution-flow/st.rerun works as a refresh button instead of onchange and onclick
+using expander: https://docs.streamlit.io/develop/api-reference/layout/st.expander 3azmaaaaaaaaaaaaa
+using columns: https://docs.streamlit.io/develop/api-reference/layout/st.columns
+using delete: https://docs.streamlit.io/develop/api-reference/caching-and-state/st.session_state#delete-items
