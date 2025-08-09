@@ -13,6 +13,15 @@ def validate_email_exists(email: str) -> bool:
             return True
     return False
 
+def validate_email_activated(email: str) -> bool:
+    for user in st.session_state.users:
+        if user["email"] == email:
+            if user["active"] == True:
+                st.warning("Account already activated")
+                return True
+            return False
+    return False
+
 def validate_phone(phone: str) -> bool:
     return bool(re.match(r"^(01[0125]\d{8})$", phone))
 

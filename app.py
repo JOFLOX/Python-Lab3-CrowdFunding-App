@@ -1,6 +1,7 @@
 import streamlit as st
 from init_state import init_session_state
 from register import register
+from activate import activate_account
 
 
 st.set_page_config(page_title="Crowd-Funding App", page_icon="💰", layout="wide")
@@ -21,3 +22,5 @@ if page == "Home":
     st.write("Please register or login to get started.")
 elif page == "Register":
     register()
+elif page == "Activate Account":
+    activate_account()
